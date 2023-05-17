@@ -50,7 +50,7 @@ Write a function named joinArray that takes an array and joins all of the elemen
 
 const joinArray = (arr) => {
   // Solution code here...
-  return arr.join(" ");
+  return arr.join(' ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -133,12 +133,16 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
-  for (let i = 0; i < recipe.ingredients.length; i++) {
-    let ingredient = recipe.ingredients[i];
-    let startIndex = ingredient.indexOf(' ') + 1;
-    let foodName = ingredient.slice(startIndex);
-    result.push(foodName);
-  }
+  recipe.ingredients.forEach((ingred) => {
+    let withoutAmount = ingred.slice(ingred.indexOf(' ') + 1);
+    let withoutUnit = withoutAmount.slice(withoutAmount.indexOf(' ') + 1);
+    result.push(withoutUnit);
+
+    // OR
+
+    // let onlyIngred = ingred.slice(ingred.indexOf(' ', 3) + 1);
+    // result.push(onlyIngred);
+  });
   return result;
 };
 
