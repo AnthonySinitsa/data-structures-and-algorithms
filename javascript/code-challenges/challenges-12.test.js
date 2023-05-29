@@ -35,7 +35,7 @@ If the word is between 5 and 10 characters long, return true. Otherwise, return 
 
 const validateWord = (word) => {
   // Solution code here...
-  let pattern = /^(.{5}|.{10})$/;
+  const pattern = /^[a-zA-Z]{5,10}$/;
   return pattern.test(word);
 };
 
