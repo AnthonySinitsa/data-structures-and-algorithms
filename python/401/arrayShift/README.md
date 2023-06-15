@@ -4,7 +4,7 @@ Array-insert-shift
 
 ## Whiteboard Process
 
-![arrayShift](/401/arrayShift/arrayShift.jpg)
+![arrayShift](arrayShift.jpg)
 
 ## Approach & Efficiency
 
