@@ -4,7 +4,7 @@ using whiteboard
 
 ## Whiteboard Process
 
-![cc1](../CC1.jpg)
+![cc1](1.jpg)
 
 ## Approach & Efficiency
 
