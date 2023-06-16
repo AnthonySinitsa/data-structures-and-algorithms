@@ -4,11 +4,11 @@
 
 ### TABLE OF CONTENTS
 
-[arrayReverse](401/code_challenges/arrayReverse/README.md)
+[arrayReverse](python/401/code_challenges/arrayReverse/README.md)
 
-[arrayShift](401/code_challenges/arrayShift/README.md)
+[arrayShift](python/401/code_challenges/arrayShift/README.md)
 
-[binarySearch](401/code_challenges/binarySearch/README.md)
+[binarySearch](python/401/code_challenges/binarySearch/README.md)
 
 [mockInterview](README.md)
 
