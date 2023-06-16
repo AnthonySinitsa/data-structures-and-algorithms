@@ -13,3 +13,4 @@
 [mockInterview](README.md)
 
 [linkedList](code_challenges/code_challenges/linkedList/README.md)
+[link to code](data_structures/linked_list.py)
