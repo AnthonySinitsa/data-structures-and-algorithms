@@ -20,3 +20,5 @@
 [linked-list-kth](code_challenges/code_challenges/linkedListKth/README.md)
 
 [linked-list-zip](code_challenges/code_challenges/linkedListZip/README.md)
+
+[stackAndQueueImplementation](code_challenges/code_challenges/stackAndQueueImplementation/README.md)
