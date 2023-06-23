@@ -18,3 +18,5 @@
 [linked-list-insertions](code_challenges/code_challenges/linkedListInsertions/README.md)
 
 [linked-list-kth](code_challenges/code_challenges/linkedListKth/README.md)
+
+[linked-list-zip](code_challenges/code_challenges/linkedListZip/README.md)

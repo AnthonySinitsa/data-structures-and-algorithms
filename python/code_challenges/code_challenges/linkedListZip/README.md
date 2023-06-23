@@ -5,14 +5,14 @@ zipped linked lists - function that takes in 2 linked lists and returns new link
 ## Approach & Efficiency
 
 Time: O(n)
-Space: O(1)
+Space: O(n)
 
 ## contribution
 
-dan quinn, jared ciccareerleo, andrew carroll
+dan quinn, jared ciccarelo, andrew carroll
 
 ## Solution
 
-run pytest test_linked_list_kth.py
+run pytest tests/code_challenges/test_linked_list_zip.py   from root
 
 ![whitebaord](1.jpg)
