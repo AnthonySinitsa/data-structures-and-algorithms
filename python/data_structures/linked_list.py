@@ -90,5 +90,27 @@ class LinkedList:
       current = current._next
     return current.value
 
+  # Write a function called zip lists
+  # Arguments: 2 linked lists
+  # Return: New Linked List
+  # Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the the zipped list.
+  @staticmethod
+  def zip_lists(list1, list2):
+    current1 = list1.head
+    current2 = list2.head
+    if current1 == None:
+      return list2
+    if current2 == None:
+      return list1
+    while current1 and current2:
+      temp1 = current1._next
+      temp2 = current2._next
+      current1._next = current2
+      current2._next = temp1
+      current1 = temp1
+      current2 = temp2
+    return list1
+
+
 class TargetError(Exception):
   pass
