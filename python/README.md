@@ -22,3 +22,5 @@
 [linked-list-zip](code_challenges/code_challenges/linkedListZip/README.md)
 
 [stackAndQueueImplementation](code_challenges/code_challenges/stackAndQueueImplementation/README.md)
+
+[stackQueuePseudo](code_challenges/code_challenges/stackQueuePseudo/README.md)
