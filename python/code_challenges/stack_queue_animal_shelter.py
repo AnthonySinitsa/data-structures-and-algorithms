@@ -1,5 +1,7 @@
 from data_structures.queue import Queue
 
+#the animal shelter class has two queues, one for dogs and one for cats. when you enqueue an animal, it checks if it's a dog or a cat and puts it in the appropriate queue. when you dequeue, it checks if the pref is a dog or a cat and returns the first animal in that queue. if the pref is neither a dog nor a cat, it returns None.
+
 class Animal:
   def __init__(self, species, name):
     self.species = species
@@ -9,6 +11,7 @@ class Animal:
 class Dog(Animal):
   def __init__(self, name=""):
     super().__init__("dog", name)
+    #super() calls the parent class's constructor and add to it.
 
 
 class Cat(Animal):
