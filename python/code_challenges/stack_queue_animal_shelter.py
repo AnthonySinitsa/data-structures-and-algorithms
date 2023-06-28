@@ -1,41 +1,29 @@
 from data_structures.queue import Queue
 
-#the animal shelter class has two queues, one for dogs and one for cats. when you enqueue an animal, it checks if it's a dog or a cat and puts it in the appropriate queue. when you dequeue, it checks if the pref is a dog or a cat and returns the first animal in that queue. if the pref is neither a dog nor a cat, it returns None.
+class Dog:
+  def __init__(self):
+    self.species = "dog"
+    self.name = "dog"
 
-class Animal:
-  def __init__(self, species, name):
-    self.species = species
-    self.name = name
-
-
-class Dog(Animal):
-  def __init__(self, name=""):
-    super().__init__("dog", name)
-    #super() calls the parent class's constructor and add to it.
-
-
-class Cat(Animal):
-  def __init__(self, name=""):
-    super().__init__("cat", name)
-
+class Cat:
+  def __init__(self):
+    self.species = "cat"
+    self.name = "cat"
 
 class AnimalShelter:
   def __init__(self):
-    self.dogs = Queue()
-    self.cats = Queue()
+    self.queue = Queue()
 
   def enqueue(self, animal):
-    if animal.species == "dog":
-      self.dogs.enqueue(animal)
-    elif animal.species == "cat":
-      self.cats.enqueue(animal)
-    else:
-      return "Sorry, we only accept cats and dogs."
+    self.queue.enqueue(animal)
 
   def dequeue(self, pref):
-    if pref == "dog":
-      return self.dogs.dequeue()
-    elif pref == "cat":
-      return self.cats.dequeue()
+    if pref != "dog" and pref != "cat":
+      return None
     else:
+      while self.queue.front:
+        if self.queue.front.value.species == pref:
+          return self.queue.dequeue()
+        else:
+          self.queue.enqueue(self.queue.dequeue())
       return None
