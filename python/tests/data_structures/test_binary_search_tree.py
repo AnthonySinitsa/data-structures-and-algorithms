@@ -6,7 +6,7 @@ def test_exists():
     assert BinarySearchTree
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_instantiate_empty():
     tree = BinarySearchTree()
     actual = tree.root
@@ -14,7 +14,7 @@ def test_instantiate_empty():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_add_to_empty():
     tree = BinarySearchTree()
     tree.add("apples")
@@ -23,7 +23,7 @@ def test_add_to_empty():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_add_left():
     tree = BinarySearchTree()
     tree.add(10)
@@ -33,7 +33,7 @@ def test_add_left():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_add_right():
     tree = BinarySearchTree()
     tree.add(10)
@@ -43,7 +43,7 @@ def test_add_right():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_add_deeper(tree):
     tree.add(25)
     actual = tree.root.right.right.value
@@ -51,21 +51,21 @@ def test_add_deeper(tree):
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_contains(tree):
     actual = tree.contains(15)
     expected = True
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_contains_deeper(tree):
     actual = tree.contains(5)
     expected = True
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_not_contains(tree):
     actual = tree.contains(100)
     expected = False
@@ -79,3 +79,19 @@ def tree():
     tree.add(5)
     tree.add(15)
     return tree
+
+
+def test_in_order_traversal(tree):
+    actual = tree.in_order()
+    expected = [5, 10, 15]
+    assert actual == expected
+
+def test_pre_order_traversal(tree):
+    actual = tree.pre_order()
+    expected = [10, 5, 15]
+    assert actual == expected
+
+def test_post_order_traversal(tree):
+    actual = tree.post_order()
+    expected = [5, 15, 10]
+    assert actual == expected

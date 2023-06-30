@@ -28,3 +28,5 @@
 [stackQueueAnimalShelter](code_challenges/code_challenges/stackQueueAnimalShelter/README.md)
 
 [stackQueueBrackets](code_challenges/code_challenges/stackQueueBrackets/README.md)
+
+[binarySearchTree](code_challenges/code_challenges/binarySearchTree/README.md)
