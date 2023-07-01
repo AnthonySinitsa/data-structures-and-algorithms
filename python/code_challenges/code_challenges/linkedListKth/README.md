@@ -1,6 +1,6 @@
 # Challenge Title
 
-zipped linked lists - function that takes in 2 linked lists and returns new linked list zipped,
+Linked List Kth
 
 ## Approach & Efficiency
 

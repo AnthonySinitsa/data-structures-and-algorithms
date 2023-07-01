@@ -111,6 +111,7 @@ class LinkedList:
       current2 = temp2
     return list1
 
-
+#create a TargerError class that doesn't pass
 class TargetError(Exception):
-  pass
+  def __init__(self, message):
+    self.message = message
