@@ -30,3 +30,5 @@
 [stackQueueBrackets](code_challenges/code_challenges/stackQueueBrackets/README.md)
 
 [binarySearchTree](code_challenges/code_challenges/binarySearchTree/README.md)
+
+[treeMax](code_challenges/code_challenges/treeMax/README.md)
