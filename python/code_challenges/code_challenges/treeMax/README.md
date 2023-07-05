@@ -17,4 +17,4 @@ run  pytest tests/code_challenges/test_tree_max.py  from root
 
 ## whitebaord
 
-![treeMax](/code_challenges/code_challenges/stackQueuePseudo/1.jpg)
+![treeMax](1.jpg)
