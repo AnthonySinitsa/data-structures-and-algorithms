@@ -17,4 +17,4 @@ run  pytest tests/code_challenges/test_stack_queue_pseudo.py  from root
 
 ## whitebaord
 
-![stackQueuePseudo](/code_challenges/code_challenges/stackQueuePseudo/1.jpg)
+![stackQueuePseudo](1.jpg)

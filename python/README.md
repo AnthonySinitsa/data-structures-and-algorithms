@@ -32,3 +32,5 @@
 [binarySearchTree](code_challenges/code_challenges/binarySearchTree/README.md)
 
 [treeMax](code_challenges/code_challenges/treeMax/README.md)
+
+[treeBreadthFirst](code_challenges/code_challenges/treeBreadthFirst/README.md)

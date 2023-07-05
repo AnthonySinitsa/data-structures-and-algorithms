@@ -3,12 +3,12 @@ from data_structures.binary_tree import BinaryTree, Node
 from code_challenges.tree_breadth_first import breadth_first
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_exists():
     assert breadth_first
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_rootless_tree():
     tree = BinaryTree()
     expected = []
@@ -16,7 +16,7 @@ def test_rootless_tree():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_single_node():
     tree = BinaryTree()
     tree.root = Node("apples")
@@ -25,7 +25,7 @@ def test_single_node():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_two_nodes():
     tree = BinaryTree()
     tree.root = Node("apples")
@@ -35,7 +35,7 @@ def test_two_nodes():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_four_nodes():
     tree = BinaryTree()
     tree.root = Node("apples")
@@ -47,7 +47,7 @@ def test_four_nodes():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_example_from_reading():
     """
     We build these out by hand because the example has some gaps
@@ -89,4 +89,41 @@ def test_example_from_reading():
     expected = [2, 7, 5, 2, 6, 9, 5, 11, 4]
     actual = breadth_first(tree)
 
+    assert actual == expected
+
+
+def test_happy_path():
+    tree = BinaryTree()
+    tree.root = Node(1)
+    tree.root.left = Node(2)
+    tree.root.right = Node(3)
+    tree.root.left.left = Node(4)
+    tree.root.right.right = Node(5)
+    expected = [1, 2, 3, 4, 5]
+    actual = breadth_first(tree)
+    assert actual == expected
+
+def test_expected_failure():
+    tree = BinaryTree()
+    tree.root = Node(1)
+    tree.root.left = Node(2)
+    tree.root.right = Node(3)
+    expected = [1, 2, 3]
+    actual = breadth_first(tree)
+    assert actual == expected
+
+def test_edge_case():
+    tree = BinaryTree()
+    tree.root = Node(1)
+    tree.root.left = Node(2)
+    expected = [1, 2]
+    actual = breadth_first(tree)
+    assert actual == expected
+
+def test_edge_case_2():
+    tree = BinaryTree()
+    tree.root = Node(1)
+    tree.root.right = Node(2)
+    expected = [1, 2]
+    actual = breadth_first(tree)
     assert actual == expected
