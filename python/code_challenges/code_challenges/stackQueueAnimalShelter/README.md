@@ -17,4 +17,4 @@ run  pytest tests/code_challenges/test_stack_queue_animal_shelter.py  from root
 
 ## whitebaord
 
-![queueAnimalShelter](/code_challenges/code_challenges/stackQueueAnimalShelter/1.jpg)
+![queueAnimalShelter](1.jpg)
