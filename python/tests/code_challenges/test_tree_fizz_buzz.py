@@ -106,3 +106,20 @@ def test_fizz_buzz_tree(tree):
     actual = fizz_tree.breadth_first()
     expected = ['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', '7', '8', 'Fizz', 'Buzz', '11', 'Fizz', '13', '14', 'FizzBuzz']
     assert actual == expected
+
+def test_fizz_buzz_tree_transformation(tree):
+    fizz_tree = fizz_buzz_tree(tree)
+    actual = fizz_tree.breadth_first()
+    expected = [
+        '1', '2', 'Fizz', '4', 'Buzz', 'Fizz', '7', '8', 'Fizz',
+        'Buzz', '11', 'Fizz', '13', '14', 'FizzBuzz'
+    ]
+    assert actual == expected
+
+# Test: Handling an empty tree
+def test_fizz_buzz_tree_with_empty_tree():
+    empty_tree = KaryTree()
+    fizz_tree = fizz_buzz_tree(empty_tree)
+    actual = fizz_tree.breadth_first()
+    expected = []
+    assert actual == expected
