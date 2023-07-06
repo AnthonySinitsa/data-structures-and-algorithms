@@ -3,12 +3,12 @@ from code_challenges.tree_fizz_buzz import fizz_buzz_tree
 from data_structures.kary_tree import KaryTree, Node
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_exists():
     assert fizz_buzz_tree
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_one_to_15_fizzy_clone(tree):
 
     fizzy_tree = fizz_buzz_tree(tree)
@@ -36,7 +36,7 @@ def test_one_to_15_fizzy_clone(tree):
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_new_copy_returned(tree):
 
     fizz_buzz_tree(tree)
@@ -99,3 +99,10 @@ def tree():
     nine.children = [fourteen, fifteen]
 
     return KaryTree(one)
+
+#happy path
+def test_fizz_buzz_tree(tree):
+    fizz_tree = fizz_buzz_tree(tree)
+    actual = fizz_tree.breadth_first()
+    expected = ['1', '2', 'Fizz', '4', 'Buzz', 'Fizz', '7', '8', 'Fizz', 'Buzz', '11', 'Fizz', '13', '14', 'FizzBuzz']
+    assert actual == expected
