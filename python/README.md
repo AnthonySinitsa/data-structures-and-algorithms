@@ -34,3 +34,5 @@
 [treeMax](code_challenges/code_challenges/treeMax/README.md)
 
 [treeBreadthFirst](code_challenges/code_challenges/treeBreadthFirst/README.md)
+
+[treeFizzBuzz](code_challenges/code_challenges/treeFizzBuzz/README.md)

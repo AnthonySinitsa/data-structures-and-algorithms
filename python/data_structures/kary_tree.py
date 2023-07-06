@@ -1,29 +1,49 @@
 from data_structures.queue import Queue
 
 
-class KaryTree:
-    def __init__(self, root=None):
-        self.root = root
+# class KaryTree:
+#     def __init__(self, root=None):
+#         self.root = root
 
-    def breadth_first(self):
-        queue = Queue()
+#     def breadth_first(self):
+#         queue = Queue()
 
-        collection = []
+#         collection = []
 
-        queue.enqueue(self.root)
+#         queue.enqueue(self.root)
 
-        while not queue.is_empty():
-            node = queue.dequeue()
-            collection.append(node.value)
-            for child in node.children:
-                queue.enqueue(child)
+#         while not queue.is_empty():
+#             node = queue.dequeue()
+#             collection.append(node.value)
+#             for child in node.children:
+#                 queue.enqueue(child)
 
-        return collection
+#         return collection
 
+
+# class Node:
+#     """K-Ary Tree Node"""
+
+#     def __init__(self, value):
+#         self.value = value
+#         self.children = []
 
 class Node:
-    """K-Ary Tree Node"""
+  def __init__(self, value=None):
+    self.value = value
+    self.children = []
 
-    def __init__(self, value):
-        self.value = value
-        self.children = []
+class KaryTree:
+  def __init__(self, root=None):
+    self.root = root
+  def breadth_first(self):
+    if not self.root:
+      return []
+    result = []
+    queue = [self.root]
+    while queue:
+      node = queue.pop(0)
+      result.append(node.value)
+      for child in node.children:
+        queue.append(child)
+    return result
