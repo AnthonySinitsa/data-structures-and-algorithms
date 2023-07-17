@@ -66,6 +66,10 @@ value gets 15 and sorted[i] gets 16, since 15 < 16, stop while loop
 
 append value (15) to sorted at current position of i: sorted=[4, 8, 15, 16, 23, 42]
 
+time complexity: O(n^2) because of the nested while loop
+
+space complexity: O(1) because the array is sorted in place
+
 ![stepthroughVisual](1.jpg)
 
 - pytest sorting/insertion/test_insertion.py

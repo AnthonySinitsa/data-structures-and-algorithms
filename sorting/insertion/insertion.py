@@ -8,3 +8,6 @@ def insertion_sort(arr): # takes in an array
       j -= 1 # j is decremented
     arr[j + 1] = value # the current element is moved to the next element
   return arr # return the sorted array
+
+# time complexity: O(n^2) because of the nested while loop
+# space complexity: O(1) because the array is sorted in place
