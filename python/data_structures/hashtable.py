@@ -50,6 +50,11 @@ class Hashtable:
 # This method should hash the key, and set the key and value pair in the table, handling collisions as needed.
 # Should a given key already exist, replace its value from the value argument given to this method.
   def set(self, key, value):
+    """
+    Args:
+        key (_type_): _description_
+        value (_type_): _description_
+    """
     index = self.hash(key)#hashes key
     for item in self._buckets[index]:
       #iterates through the bucket
