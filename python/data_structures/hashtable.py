@@ -93,3 +93,16 @@ class Hashtable:
         keys.append(item[0])
         #appends the key to the keys array
     return keys
+
+  def display(self):
+    """
+    This is a display function
+    Paramaters: None
+    Returns: Array
+    """
+    for bucket in self._buckets:
+      #iterates through the buckets
+      if bucket:
+        #checks if the bucket is not empty
+        print(bucket)
+        #prints the bucket
