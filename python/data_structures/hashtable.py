@@ -113,12 +113,17 @@
 #         #prints the bucket
 
 #   def contains(self, key):
-#     """
-#     This is a contains function
-#     Paramaters: Key
-#     Returns: Boolean
-#     """
-#     index = self.hash(key)
+#       """
+#       Args: key (_type_): _description_
+#       Returns: _type_: _description_
+#       """
+#       index = self.hash(key)
+#       current = self._buckets[index]
+#       while current:
+#         if current.key == key:
+#           return True
+#         current = current.next
+#       return False
 
 class Node:
   def __init__(self, key, value):
@@ -133,9 +138,23 @@ class Hashtable:
     self._buckets = [None] * size
 
   def hash(self, key):
+    """_summary_
+
+    Args:
+        key (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     return hash(key) % self.size
 
   def set(self, key, value):
+    """_summary_
+
+    Args:
+        key (_type_): _description_
+        value (_type_): _description_
+    """
     index = self.hash(key)
 
     if self._buckets[index] is None:
@@ -156,6 +175,17 @@ class Hashtable:
 
 
   def get(self, key):
+    """_summary_
+
+    Args:
+        key (_type_): _description_
+
+    Raises:
+        KeyError: _description_
+
+    Returns:
+        _type_: _description_
+    """
     index = self.hash(key)
 
     current = self._buckets[index]
@@ -168,6 +198,14 @@ class Hashtable:
     raise KeyError(key)
 
   def has(self, key):
+    """_summary_
+
+    Args:
+        key (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     try:
       self.get(key)
       return True
@@ -175,6 +213,11 @@ class Hashtable:
       return False
 
   def keys(self):
+    """_summary_
+
+    Returns:
+        _type_: _description_
+    """
     keys_list = []
     for node in self._buckets:
       current = node
@@ -185,8 +228,13 @@ class Hashtable:
 
   def contains(self, key):
     """
-    This is a contains function
-    Paramaters: Key
-    Returns: Boolean
+    Args: key (_type_): _description_
+    Returns: _type_: _description_
     """
     index = self.hash(key)
+    current = self._buckets[index]
+    while current:
+      if current.key == key:
+        return True
+      current = current.next
+    return False
