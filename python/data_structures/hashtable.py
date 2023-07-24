@@ -111,3 +111,11 @@ class Hashtable:
         #checks if the bucket is not empty
         print(bucket)
         #prints the bucket
+
+  def contains(self, key):
+    """
+    This is a contains function
+    Paramaters: Key
+    Returns: Boolean
+    """
+    index = self.hash(key)
