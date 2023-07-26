@@ -42,3 +42,5 @@
 [hashtableFirstRepeat](code_challenges/code_challenges/hashtableRepeat/README.md)
 
 [treeIntersection](code_challenges/code_challenges/treeIntersection/README.md)
+
+[hashLeftJoin](code_challenges/code_challenges/hashLeftJoin/README.md)
